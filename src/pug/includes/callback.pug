@@ -1,0 +1,79 @@
+section.callback.margin-section
+  .container.callback__container 
+    .callback__info.callback-info
+      p.callback-info__text Оформление заявки
+      h2.h2title.callback-info__title Оставьте свои контакты
+      .callback-info__decors
+        .callback-info__decor
+        .callback-info__decor
+        .callback-info__decor
+      h3.callback-info__subtitle Есть вопросы?
+      a.callback-info__text(href="mailto:growthpoint@gmail.com") growthpoint@gmail.com
+      a.callback-info__social(href="#")
+        <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.4218 1.36715C18.6562 0.273401 18.0312 -0.156286 17.3281 0.117152L1.78119 6.09371C0.726504 6.5234 0.765566 7.10934 1.62494 7.38278L5.57025 8.59371L14.789 2.81246C15.2187 2.49996 15.6484 2.69528 15.2968 2.96871L7.83588 9.68746L7.56244 13.789C7.99213 13.789 8.14838 13.6328 8.38275 13.3984L10.2968 11.5234L14.3203 14.4922C15.0624 14.9218 15.6093 14.6875 15.8046 13.8281L18.4218 1.36715Z" fill="#F4F4F4"/>
+        </svg>
+    form.callback__form.callback-form(action="#") 
+      input.callback-form__input(type="text" placeholder="Имя" data-required)
+      input.callback-form__input(type="tel" placeholder="Телефон" data-type="tel" data-required)
+      input.callback-form__input(type="email" placeholder="E-mail" data-type="email")
+      h3.callback-info__subtitle Желаемая услуга
+      ul.callback-form__list.callback-form-list
+        li.callback-form-list__item 
+          label.callback-form-list__label
+            input.visually-hidden(type="checkbox" )
+            span Консультация
+        li.callback-form-list__item 
+          label.callback-form-list__label
+            input.visually-hidden(type="checkbox" )
+            span Обслуживание
+        li.callback-form-list__item 
+          label.callback-form-list__label
+            input.visually-hidden(type="checkbox" )
+            span Разработка
+        li.callback-form-list__item 
+          label.callback-form-list__label
+            input.visually-hidden(type="checkbox" )
+            span Создание дизайна
+        li.callback-form-list__item 
+          label.callback-form-list__label
+            input.visually-hidden(type="checkbox" )
+            span Start-Up поддержка
+        li.callback-form-list__item 
+          label.callback-form-list__label
+            input.visually-hidden(type="checkbox" data-check="Комплексное решение")
+            span Комплексное решение
+      h3.callback-info__subtitle О проекте
+      textarea.callback-form__textarea(placeholder="Задача")
+      .callback-form__files.callback-form-files
+        label.callback-form-files__download
+          input.visually-hidden(type="file" multiple)
+          span 
+            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5 11.5L11.7426 17.2574C10.947 18.053 9.86786 18.5 8.74264 18.5C6.3995 18.5 4.5 16.6005 4.5 14.2574C4.5 13.1321 4.94699 12.053 5.74264 11.2574L11.6716 5.32843C12.202 4.79799 12.9214 4.5 13.6716 4.5C15.2337 4.5 16.5 5.76633 16.5 7.32843C16.5 8.07857 16.202 8.79799 15.6716 9.32843L9.91421 15.0858C9.649 15.351 9.28929 15.5 8.91421 15.5C8.13316 15.5 7.5 14.8668 7.5 14.0858C7.5 13.7107 7.649 13.351 7.91421 13.0858L13.5 7.5" stroke="#F4F4F4"/>
+            </svg>
+            | Прикрепить файл(ы)
+        .callback-form-files__items
+          .callback-form-files__main.callback-form-files-main 
+            button.callback-form-files-main__del
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 6L17 17M6 17L17 6"/>
+              </svg>
+            span.callback-form-files-main__title Снимок экрана, 567123123 Снимок экрана, 567123123.jpg
+            button.callback-form-files-main__more +2
+          ul.callback-form-files__list.callback-form-files-list
+            li.callback-form-files-list__item 
+              button.callback-form-files-list__del
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 6L17 17M6 17L17 6"/>
+                </svg>
+              span.callback-form-files-list__title осказочницадашаотид123осказочницадашаотид123
+            li.callback-form-files-list__item 
+              button.callback-form-files-list__del
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 6L17 17M6 17L17 6"/>
+                </svg>
+              span.callback-form-files-list__title Сказкаоваселькерролд12313 Сказкаоваселькерролд
+      p.callback-form__privacy Нажав кнопку, соглашаюсь с 
+        button.popup-btn(data-popup="privacy") политикой конфиденциальности
+      button.btn-primary.callback-form__send(type="submit") Оформить заявку

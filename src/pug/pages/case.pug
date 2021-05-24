@@ -1,0 +1,109 @@
+extends ../template
+
+block variables
+  - var title = 'Кейс'
+  - var breadcrumbs = 1
+  - var form = 1
+  - var contacts = 1
+
+block content 
+  .case.margin-section
+    .container 
+      h1.h1title Разработка одежды под ключ DPClo
+    .case__tags.case-tags
+      .container 
+        ul.case-tags__list 
+          li.case-tags__item.case-tags-item 
+            .case-tags-item__link Прототипирование
+          li.case-tags__item.case-tags-item 
+            .case-tags-item__link UI/UX
+          li.case-tags__item.case-tags-item 
+            .case-tags-item__link Разработка
+          li.case-tags__item.case-tags-item
+            a.case-tags-item__link(href="#") 
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.5 10.5L5.32843 13.6716C4.79799 14.202 4.5 14.9214 4.5 15.6716C4.5 17.2337 5.76633 18.5 7.32843 18.5C8.07857 18.5 8.79799 18.202 9.32843 17.6716L12.5 14.5M14.5 12.5L17.6716 9.32843C18.202 8.79799 18.5 8.07857 18.5 7.32843C18.5 5.76633 17.2337 4.5 15.6716 4.5C14.9214 4.5 14.202 4.79799 13.6716 5.32843L10.5 8.5M8.5 14.5L14.5 8.5"/>
+              </svg>
+              | Посетить сайт 
+    .case__content.case-content 
+      .container 
+        .case-content__info.case-content-info 
+          .case-content-info__row
+            h2.case-content-info__title Клиент и задача
+            .case-content-info__text
+              p Copycat — это сервис для регистрации товарных знаков и защиты брендов от копирования. Проект запустила команда юридической компании Versus.legal.
+              p Наша задача — сделать сайт на платформе Тильда, который расскажет посетителям, зачем нужна регистрация товарного знака, как она происходит и какую пользу от этого получат клиенты компании.
+          .case-content-info__row
+            h2.case-content-info__title Цель проекта
+            .case-content-info__text
+              p Цель — дружелюбность используем спокойные цвета и графику, чтобы пользователю было проще вникнуть в непростую правовую тематику. Как она происходит какую пользу от этого получат клиенты компании.
+      .case-content__part
+        .container
+          .case-content__slider.case-content-slider.swiper-container 
+            ul.case-content-slider__wrapper.swiper-wrapper
+              li.case-content-slider__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/case-slider.jpg")
+                  img.case-content-slider__img(src="images/case-slider.jpg" alt="Разработка одежды под ключ DPClo")
+              li.case-content-slider__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/case-slider.jpg")
+                  img.case-content-slider__img(src="images/case-slider.jpg" alt="Разработка одежды под ключ DPClo")
+              li.case-content-slider__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/case-slider.jpg")
+                  img.case-content-slider__img(src="images/case-slider.jpg" alt="Разработка одежды под ключ DPClo")
+              li.case-content-slider__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/case-slider.jpg")
+                  img.case-content-slider__img(src="images/case-slider.jpg" alt="Разработка одежды под ключ DPClo")
+            .swiper-scrollbar
+            .swiper-pagination
+            .swiper-button-prev
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 11.5L9.5 7.5M5.5 11.5L9.5 15.5M5.5 11.5H18"/>
+              </svg>
+            .swiper-button-next
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 11.5L13.5 7.5M17.5 11.5L13.5 15.5M17.5 11.5H5"/>
+              </svg>
+
+      .container
+        h2.case-content__title Главная страница
+      .case-content__part
+        .container
+          picture
+            source(type="image/webp" srcset="images/case-page.jpg")
+            img.case-content__img(src="images/case-page.jpg" alt="Главяная страница")
+
+      .container
+        h2.case-content__title Каталог
+      .case-content__part
+        .container
+          picture
+            source(type="image/webp" srcset="images/case-page.jpg")
+            img.case-content__img(src="images/case-page.jpg" alt="Каталог")
+
+      .container
+        h2.case-content__title Адаптивная версия
+      .case-content__part
+        .container
+          picture
+            source(type="image/webp" srcset="images/case-page.jpg")
+            img.case-content__img(src="images/case-page.jpg" alt="Адаптивная версия")
+
+    .case__tags.case-tags
+      .container 
+        ul.case-tags__list 
+          li.case-tags__item.case-tags-item 
+            .case-tags-item__link Прототипирование
+          li.case-tags__item.case-tags-item 
+            .case-tags-item__link UI/UX
+          li.case-tags__item.case-tags-item 
+            .case-tags-item__link Разработка
+          li.case-tags__item.case-tags-item
+            a.case-tags-item__link(href="#") 
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.5 10.5L5.32843 13.6716C4.79799 14.202 4.5 14.9214 4.5 15.6716C4.5 17.2337 5.76633 18.5 7.32843 18.5C8.07857 18.5 8.79799 18.202 9.32843 17.6716L12.5 14.5M14.5 12.5L17.6716 9.32843C18.202 8.79799 18.5 8.07857 18.5 7.32843C18.5 5.76633 17.2337 4.5 15.6716 4.5C14.9214 4.5 14.202 4.79799 13.6716 5.32843L10.5 8.5M8.5 14.5L14.5 8.5"/>
+              </svg>
+              | Посетить сайт 

@@ -1,0 +1,133 @@
+.footer {
+  padding: 25px 0;
+  background: var(--surface);
+  box-shadow: 0px 4px 40px rgba(255, 255, 255, 0.04);
+  @include w1023 {
+    margin-bottom: 60px;
+    padding: 20px 0 19px;
+    box-shadow: none;
+    border-top: 1px solid $neutrals-3;
+  }
+  @include w767 {
+    padding: 28px 0;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include w1023 {
+      flex-direction: row-reverse;
+    }
+    @include w767 {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+  &__logo {
+    display: flex;
+    width: 150px;
+    @include w1023 {
+      display: none;
+    }
+    path {
+      transition: 0.2s;
+    }
+    @include hover {
+      &:hover path,
+      &:focus path {
+        fill: var(--accent);
+      }
+    }
+    @include active {
+      &:active path {
+        fill: var(--accent);
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+  }
+  &-list {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 54px;
+        @include w1200 {
+          margin-right: 32px;
+        }
+        @include w1023 {
+          margin-right: 0;
+        }
+      }
+    }
+    &__link {
+      position: relative;
+      padding: 0;
+      background: none;
+      border: none;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 23px;
+      color: var(--main-on-surface);
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      @include w1200 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      @include w1023 {
+        font-size: 12px;
+        line-height: 17px;
+      }
+      @include hover {
+        &:hover:after,
+        &:focus:after {
+          transform: scale(1);
+        }
+      }
+      @include active {
+        &:active:after {
+          transform: scale(1);
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        right: -9px;
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: var(--accent);
+        border-radius: 50%;
+        transform: scale(0);
+        transition: transform 0.15s ease;
+      }
+      &:not(.popup-btn) {
+        @include w1023 {
+          display: none;
+        }
+      }
+    }
+  }
+  &__copy {
+    font-size: 14px;
+    line-height: 20px;
+    color: $neutrals-6;
+    @include w1023 {
+      font-size: 12px;
+      line-height: 17px;
+    }
+    @include w767 {
+      margin-bottom: 15px !important;
+    }
+    span {
+      display: none;
+      @include w1023 {
+        display: inline;
+      }
+    }
+  }
+}

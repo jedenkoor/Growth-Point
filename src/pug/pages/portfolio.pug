@@ -1,0 +1,116 @@
+extends ../template
+
+block variables
+  - var title = 'Портфолио'
+  - var breadcrumbs = 1
+  - var form = 1
+  - var contacts = 1
+
+block content 
+  .portfolio.margin-section
+    .container 
+      h1.h1title Портфолио
+    form.portfolio__filter.portfolio-filter 
+      .container.portfolio-filter__container
+        ul.portfolio-filter__list 
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span Медицина
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span Недвижимость
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span Банки
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span Еда
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span IT
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span Образование
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span Логистика
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span Промышленность
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span Фарма
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span Мебель
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span Детские товары
+          li.portfolio-filter__item.portfolio-filter-item 
+            label.portfolio-filter-item__label
+              input.visually-hidden(type="checkbox" name="filter")
+              span Ecommerce
+        button.portfolio-filter__reset(type="reset") 
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6L17 17M6 17L17 6"/>
+          </svg>
+          | Сбросить фильтр
+    .container
+      ul.cases__list 
+        li.cases__item.cases-item 
+          a.cases-item__link(href="#")
+            picture
+              source(type="image/webp" srcset="images/preview.jpg")
+              img.cases-item__img(src="images/preview.jpg" alt="Сайт для компании по разработке одежды под ключ DPClo")
+            .cases-item__content
+              span.cases-item__span Медицина
+              span.cases-item__span 2021
+              h4.cases-item__title Сайт для компании по разработке одежды под ключ DPClo 
+        li.cases__item.cases-item 
+          a.cases-item__link(href="#")
+            picture
+              source(type="image/webp" srcset="images/preview.jpg")
+              img.cases-item__img(src="images/preview.jpg" alt="Сайт для компании по разработке одежды под ключ DPClo")
+            .cases-item__content
+              span.cases-item__span Медицина
+              span.cases-item__span 2021
+              h4.cases-item__title Сайт для компании по разработке одежды под ключ DPClo 
+        li.cases__item.cases-item 
+          a.cases-item__link(href="#")
+            picture
+              source(type="image/webp" srcset="images/preview.jpg")
+              img.cases-item__img(src="images/preview.jpg" alt="Сайт для компании по разработке одежды под ключ DPClo")
+            .cases-item__content
+              span.cases-item__span Медицина
+              span.cases-item__span 2021
+              h4.cases-item__title Сайт для компании по разработке одежды под ключ DPClo 
+        li.cases__item.cases-item 
+          a.cases-item__link(href="#")
+            picture
+              source(type="image/webp" srcset="images/preview.jpg")
+              img.cases-item__img(src="images/preview.jpg" alt="Сайт для компании по разработке одежды под ключ DPClo")
+            .cases-item__content
+              span.cases-item__span Медицина
+              span.cases-item__span 2021
+              h4.cases-item__title Сайт для компании по разработке одежды под ключ DPClo 
+        li.cases__item.cases-item 
+          a.cases-item__link(href="#")
+            picture
+              source(type="image/webp" srcset="images/preview.jpg")
+              img.cases-item__img(src="images/preview.jpg" alt="Сайт для компании по разработке одежды под ключ DPClo")
+            .cases-item__content
+              span.cases-item__span Медицина
+              span.cases-item__span 2021
+              h4.cases-item__title Сайт для компании по разработке одежды под ключ DPClo 
+

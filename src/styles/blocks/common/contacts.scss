@@ -1,0 +1,113 @@
+.contacts {
+  &__content {
+    display: grid;
+    grid-template-columns: 650px auto;
+    grid-gap: 10%;
+    @include w1200 {
+      grid-template-columns: 500px auto;
+    }
+    @include w1023 {
+      grid-template-columns: 338px auto;
+      grid-gap: 40px;
+    }
+    @include w767 {
+      grid-template-columns: 100%;
+    }
+  }
+  &__map {
+    width: 100%;
+    height: 520px;
+    border-radius: 3px;
+    overflow: hidden;
+    @include w1023 {
+      height: 338px;
+    }
+    @include w767 {
+      height: 328px;
+    }
+    .ymaps-2-1-78-copyrights-pane,
+    .ymaps-2-1-78-controls__toolbar,
+    .ymaps-2-1-78-controls__bottom {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      clip: rect(0 0 0 0);
+    }
+    [class*='ymaps-2'][class*='-ground-pane'] {
+      filter: grayscale(1) brightness(1.1) invert(100%) contrast(0.7);
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateY(-12px);
+    @include w1023 {
+      transform: translateY(-4px);
+    }
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0;
+    @include w1023 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  &__text {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0;
+    transition: color 0.2s;
+    @include w1023 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &:is(a) {
+      @include hover {
+        &:hover,
+        &:focus {
+          color: var(--accent);
+        }
+      }
+      @include active {
+        &:active {
+          color: var(--accent);
+        }
+      }
+    }
+    & + .contacts__title {
+      margin-top: 45px;
+      @include w1023 {
+        margin-top: 40px;
+      }
+    }
+  }
+  &__social {
+    margin-top: 10px;
+    path {
+      transition: fill 0.2s;
+    }
+    @include hover {
+      &:hover path,
+      &:focus path {
+        fill: var(--accent);
+      }
+    }
+    @include active {
+      &:active path {
+        fill: var(--accent);
+      }
+    }
+  }
+}

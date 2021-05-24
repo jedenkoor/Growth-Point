@@ -1,0 +1,299 @@
+.banner {
+  position: relative;
+  margin-bottom: 109px;
+  padding-top: 121px;
+  padding-bottom: 315px;
+  overflow: hidden;
+  @include w1023 {
+    margin-bottom: 85px;
+    padding-top: 44px;
+    padding-bottom: 202px;
+  }
+  @include w767 {
+    padding-top: 40px;
+    padding-bottom: 297px;
+  }
+  &__container {
+    position: relative;
+  }
+  &__title {
+    position: relative;
+    z-index: -1;
+    max-width: 500px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 103px;
+    line-height: 117px;
+    letter-spacing: 0.01em;
+    @include w1023 {
+      font-size: 78px;
+      line-height: 85px;
+    }
+    @include w767 {
+      max-width: 240px;
+      margin-bottom: 20px;
+      font-size: 48px;
+      line-height: 50px;
+    }
+  }
+  &__text {
+    position: absolute;
+    top: 33px;
+    left: 322px;
+    max-width: 380px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    @include w1023 {
+      top: 23px;
+      left: 237px;
+      max-width: 280px;
+      font-size: 12px;
+      line-height: 17px;
+    }
+    @include w767 {
+      position: static;
+      margin-bottom: 40px;
+    }
+  }
+  &__leftimg {
+    position: absolute;
+    top: 182px;
+    right: 92%;
+    width: calc(50vw - (50% - 108px));
+    height: 30px;
+    background: url('../images/banner-right.gif') center/cover;
+    @include w1023 {
+      top: 135px;
+      right: auto;
+      left: 0;
+      width: 88px;
+      height: 19px;
+    }
+    @include w767 {
+      top: 78px;
+      width: 63px;
+      height: 14px;
+    }
+  }
+  &__right {
+    isolation: isolate;
+    @include w767 {
+      position: relative;
+      width: max-content;
+      margin-bottom: 87px;
+    }
+  }
+  &__rightimg {
+    position: absolute;
+    top: 47px;
+    right: 79px;
+    width: 364px;
+    height: 165px;
+    background: url('../images/banner-right.gif') center/cover;
+    @include w1200 {
+      width: 244px;
+    }
+    @include w1023 {
+      top: 39px;
+      right: 61px;
+      width: 140px;
+      height: 116px;
+    }
+    @include w767 {
+      position: static;
+      width: 285px;
+      height: 105px;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: -35px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 230px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    @include w1023 {
+      top: -4px;
+      right: 16px;
+      width: 140px;
+      height: 140px;
+    }
+    @include w767 {
+      top: 12px;
+      right: -43px;
+    }
+    svg {
+      @include w1023 {
+        width: 36px;
+        height: auto;
+      }
+    }
+    @include hover {
+      &:hover svg,
+      &:focus svg {
+        transform: translateX(10px);
+      }
+      &:active svg {
+        transform: translateX(0);
+      }
+    }
+    @include active {
+      &:active svg {
+        transform: translateX(5px);
+      }
+    }
+  }
+  &-btn {
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../images/banner-portfolio.svg') center/cover;
+      mix-blend-mode: difference;
+      animation: banner-rotate 20s linear infinite;
+    }
+    svg {
+      transition: transform 0.4s;
+    }
+  }
+  &__line {
+    position: absolute;
+    display: flex;
+    margin-bottom: 20px;
+    padding-left: 0;
+    list-style: none;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    @include w1023 {
+      margin-bottom: 15px;
+    }
+    &:nth-of-type(1) {
+      right: -49.8%;
+      bottom: 100px;
+      animation: banner-lines-1 10s ease-in-out infinite;
+      @include w1200 {
+        right: -63.8%;
+      }
+      @include w1023 {
+        right: -77.4%;
+        bottom: 80px;
+      }
+      @include w767 {
+        right: -147.4%;
+        bottom: 63px;
+      }
+    }
+    &:nth-of-type(2) {
+      right: calc(50% - 503px);
+      bottom: 0;
+      animation: banner-lines-2 10s ease-in-out infinite;
+      @include w1200 {
+        right: 13%;
+      }
+      @include w1023 {
+        right: 8.4%;
+      }
+      @include w767 {
+        right: -2.6%;
+        bottom: -15px;
+      }
+    }
+    &:nth-of-type(3) {
+      bottom: 141px;
+      animation: banner-lines-2 10s ease-in-out infinite;
+    }
+    &:nth-of-type(4) {
+      right: -80%;
+      animation: banner-lines-1 10s ease-in-out infinite;
+    }
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      display: none;
+      @include w767 {
+        display: flex;
+      }
+    }
+  }
+  &-line {
+    &__link {
+      display: block;
+      padding: 23px 37px;
+      background-color: var(--card-surface);
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 34px;
+      white-space: nowrap;
+      transition: color 0.2s;
+      @include w1200 {
+        padding: 20px 28px;
+        font-size: 22px;
+        line-height: 30px;
+      }
+      @include w1023 {
+        padding: 20px 25px;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0;
+      }
+      @include w767 {
+        font-size: 16px;
+        line-height: 23px;
+      }
+      @include hover {
+        &:hover,
+        &:focus {
+          color: var(--accent);
+        }
+      }
+      @include active {
+        &:active {
+          color: var(--accent);
+        }
+      }
+    }
+  }
+}
+
+@keyframes banner-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes banner-lines-1 {
+  0% {
+    transform: perspective(1px) translateZ(0) translateX(0);
+  }
+  50% {
+    transform: perspective(1px) translateZ(0) translateX(30px);
+  }
+  100% {
+    transform: perspective(1px) translateZ(0) translateX(0);
+  }
+}
+
+@keyframes banner-lines-2 {
+  0% {
+    transform: perspective(1px) translateZ(0) translateX(0);
+  }
+  50% {
+    transform: perspective(1px) translateZ(0) translateX(-30px);
+  }
+  100% {
+    transform: perspective(1px) translateZ(0) translateX(0);
+  }
+}

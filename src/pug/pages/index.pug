@@ -1,0 +1,62 @@
+extends ../template
+
+block variables
+  - var title = 'Карта сайта'
+
+block content
+  style.
+    .map__container{
+      margin-top: 50px;
+    }
+    .h1title{
+      margin-bottom: 50px
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td{
+      width: 50%;
+      border: 1px solid var(--main-on-surface)
+    }
+    td:hover{
+      background: #555;
+    }
+    td a{
+      display: block;
+      padding: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      .map__container{
+        margin-top: 24px;
+      }
+      tr,
+      td {
+        display: block
+      }
+      tr:not(:last-child) td{
+        border-bottom: none
+      }
+      td{
+        width: 100%
+      }
+      td a{
+        padding: 10px;
+        font-size: 16px;
+      }
+    }
+  .container.map__container.margin-section
+    h1.h1title Карта сайта
+    table
+      tbody
+        tr
+          td 
+            a(href="main.html" target="_blank") Главная
+        tr
+          td 
+            a(href="portfolio.html" target="_blank") Портфолио
+          td 
+            a(href="case.html" target="_blank") Кейс
+        tr
+          td 
+            a(href="404.html" target="_blank") 404

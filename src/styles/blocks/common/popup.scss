@@ -1,0 +1,99 @@
+.popup {
+  position: fixed;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: 100%;
+  max-width: 850px;
+  background-color: var(--surface);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  &--active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0.2s linear, visibility 0s linear, opacity 0.2s linear;
+  }
+  &__close {
+    position: fixed;
+    z-index: 2;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    &:hover path,
+    &:focus path {
+      stroke: var(--accent);
+    }
+    path {
+      transition: stroke 0.2s;
+      stroke: var(--main-on-surface);
+    }
+  }
+  &__content {
+    background-color: var(--surface);
+    max-height: 95vh;
+    padding: 100px;
+    overflow-y: auto;
+    @include w1023 {
+      max-height: 80vh;
+      padding: 70px;
+    }
+    @include w767 {
+      padding: 70px 16px;
+    }
+  }
+  &__title,
+  &__formtitle,
+  &__messagetitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.01em;
+    @include w1023 {
+      margin-bottom: 15px;
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 0;
+    }
+    &:first-child:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    margin-bottom: 60px;
+    @include w1023 {
+      margin-bottom: 40px;
+    }
+  }
+  &__messagetitle {
+    text-align: center;
+    font-size: 32px;
+    line-height: 39px;
+    @include w1023 {
+      font-size: 28px;
+      line-height: 34px;
+    }
+    @include w767 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  &__formtext {
+    margin-bottom: 60px;
+    letter-spacing: 0.01em;
+    @include w1023 {
+      margin-bottom: 40px;
+    }
+  }
+  &__text {
+    letter-spacing: 0.01em;
+  }
+}

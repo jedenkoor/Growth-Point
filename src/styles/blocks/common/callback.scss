@@ -1,0 +1,444 @@
+.callback {
+  overflow: hidden;
+  &__container {
+    display: grid;
+    grid-template-columns: auto 650px;
+    grid-gap: 10%;
+    @include w1200 {
+      grid-template-columns: auto 500px;
+    }
+    @include w1023 {
+      grid-template-columns: auto 358px;
+    }
+    @include w767 {
+      grid-template-columns: 100%;
+      grid-gap: 40px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &-info {
+    &__text {
+      margin-bottom: 11px;
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 0;
+      transition: color 0.2s;
+      @include w1023 {
+        margin-bottom: 15px;
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: 0.01em;
+      }
+      &:is(a) {
+        @include hover {
+          &:hover,
+          &:focus {
+            color: var(--accent);
+          }
+        }
+        @include active {
+          &:active {
+            color: var(--accent);
+          }
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 29px;
+      @include w1023 {
+        margin-bottom: 20px;
+      }
+      @include w767 {
+        margin-bottom: 40px;
+      }
+    }
+    &__subtitle {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 34px;
+      @include w1023 {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0;
+      }
+      & + .callback-info__text {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    &__social {
+      path {
+        transition: fill 0.2s;
+      }
+      @include hover {
+        &:hover path,
+        &:focus path {
+          fill: var(--accent);
+        }
+      }
+      @include active {
+        &:active path {
+          fill: var(--accent);
+        }
+      }
+    }
+    &__decors {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      @include w767 {
+        flex-direction: row;
+      }
+    }
+    &__decor {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 30px;
+      border-radius: 50%;
+      @include w1023 {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 20px;
+      }
+      @include w767 {
+        margin-right: 20px;
+        margin-bottom: 40px;
+      }
+      &:nth-of-type(1) {
+        background: url('../images/icon-decor-1.jpg') center/cover;
+      }
+      &:nth-of-type(2) {
+        background: url('../images/icon-decor-2.jpg') center/cover;
+      }
+      &:nth-of-type(3) {
+        margin-top: auto;
+        background: url('../images/icon-decor-3.jpg') center/cover;
+      }
+    }
+  }
+  &__form {
+    @include w1023 {
+      position: relative;
+    }
+  }
+  &-form {
+    &__input,
+    &__textarea {
+      margin-bottom: 20px;
+      @include w1023 {
+        margin-bottom: 15px;
+      }
+    }
+    .callback-info__subtitle {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      @include w1023 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+      }
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      list-style: none;
+      @include w1023 {
+        width: calc(100% + 16px);
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+      }
+      @include w767 {
+        transform: translateX(-16px);
+        padding-left: 16px;
+        width: calc(100% + 32px);
+      }
+      &:after {
+        @include w1023 {
+          content: '';
+          flex: 0 0 16px;
+        }
+      }
+    }
+    &-list {
+      &__item {
+        margin-bottom: 20px;
+        @include w1200 {
+          margin-bottom: 15px;
+        }
+        &:not(:last-child) {
+          margin-right: 20px;
+          @include w1200 {
+            margin-right: 15px;
+          }
+        }
+      }
+      &__label {
+        input {
+          @include hover {
+            &:focus + span {
+              border-color: var(--accent);
+            }
+          }
+          &:checked + span {
+            border-color: var(--accent);
+            color: var(--accent);
+          }
+        }
+        span {
+          display: block;
+          padding: 12px 29px;
+          border: 1px solid #c4c4c4;
+          border-radius: 3px;
+          font-weight: bold;
+          letter-spacing: 0.01em;
+          cursor: pointer;
+          transition: color 0.2s, border-color 0.2s;
+          white-space: nowrap;
+          @include w1200 {
+            padding: 12px 19px;
+          }
+          @include w1023 {
+            font-weight: 500;
+          }
+          @include hover {
+            &:hover {
+              border-color: var(--accent);
+            }
+          }
+          @include active {
+            &:active {
+              border-color: var(--accent);
+            }
+          }
+        }
+      }
+    }
+    &__files {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      @include w1023 {
+        margin-bottom: 38px;
+      }
+    }
+    &-files {
+      &__download {
+        input {
+          @include hover {
+            &:focus + span {
+              color: var(--accent);
+              path {
+                stroke: var(--accent);
+              }
+            }
+          }
+        }
+        span {
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 26px;
+          letter-spacing: 0;
+          cursor: pointer;
+          transition: color 0.2s;
+          @include w1023 {
+            font-size: 0;
+          }
+          @include hover {
+            &:hover {
+              color: var(--accent);
+              path {
+                stroke: var(--accent);
+              }
+            }
+          }
+          @include active {
+            &:active {
+              color: var(--accent);
+              path {
+                stroke: var(--accent);
+              }
+            }
+          }
+          svg {
+            flex-shrink: 0;
+            margin-right: 11px;
+          }
+          path {
+            transition: stroke 0.2s;
+          }
+        }
+      }
+      &__items {
+        position: relative;
+      }
+      &__main {
+        display: flex;
+        align-items: center;
+      }
+      &-main {
+        &__del {
+          display: flex;
+          padding: 0;
+          background: none;
+          border: none;
+          cursor: pointer;
+          path {
+            transition: stroke 0.2s;
+            stroke: var(--main-on-surface);
+          }
+          @include hover {
+            &:hover path,
+            &:focus path {
+              stroke: var(--accent);
+            }
+          }
+          @include active {
+            &:active path {
+              stroke: var(--accent);
+            }
+          }
+        }
+        &__title {
+          max-width: 178px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        &__more {
+          display: flex;
+          margin-left: 13px;
+          padding: 0 7px;
+          background: var(--main-on-surface);
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
+          font-size: 14px;
+          line-height: 20px;
+          color: var(--surface);
+          transition: 0.2s;
+          @include hover {
+            &:hover,
+            &:focus {
+              background: var(--primary);
+              color: var(--main-on-surface);
+            }
+          }
+          @include active {
+            &:active {
+              background: var(--primary);
+              color: var(--main-on-surface);
+            }
+          }
+        }
+      }
+      &__list {
+        position: absolute;
+        bottom: calc(100% + 8px);
+        right: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 12px;
+        background: var(--main-on-surface);
+        border-radius: 3px;
+        list-style: none;
+        color: var(--surface);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+        transition: opacity 0.3s, transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), visibility 0s 0.3s;
+        &--active {
+          opacity: 1;
+          visibility: visible;
+          transform: none;
+          transition: opacity 0.3s, transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), visibility 0s 0s;
+        }
+      }
+      &-list {
+        &__item {
+          display: flex;
+          align-items: center;
+          & + & {
+            margin-bottom: 6px;
+          }
+        }
+        &__del {
+          display: flex;
+          padding: 0;
+          background: none;
+          border: none;
+          cursor: pointer;
+          path {
+            transition: stroke 0.2s;
+            stroke: var(--surface);
+          }
+          @include hover {
+            &:hover path,
+            &:focus path {
+              stroke: var(--primary);
+            }
+          }
+          @include active {
+            &:active path {
+              stroke: var(--primary);
+            }
+          }
+        }
+        &__title {
+          max-width: 210px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+    &__privacy {
+      margin-bottom: 25px;
+      opacity: 0.5;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+      @include w1023 {
+        margin-bottom: 15px;
+        font-size: 12px;
+        line-height: 17px;
+      }
+      button {
+        padding: 0;
+        background: none;
+        border: none;
+        text-decoration: underline;
+        cursor: pointer;
+        color: var(--main-on-surface);
+        transition: color 0.2s;
+        letter-spacing: 0.01em;
+        @include hover {
+          &:hover,
+          &:focus {
+            color: var(--accent);
+          }
+        }
+        @include active {
+          &:active {
+            color: var(--accent);
+          }
+        }
+      }
+    }
+    &__send {
+      width: 100%;
+      padding: 13px 0;
+      @include w1023 {
+        padding: 11px 0;
+      }
+    }
+  }
+}

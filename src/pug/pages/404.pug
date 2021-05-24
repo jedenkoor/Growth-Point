@@ -1,0 +1,15 @@
+extends ../template
+
+block variables
+  - var title = '404'
+
+block content
+  section.notfound
+    .container.notfound__container
+      h1.notfound__title 404
+      .notfound__text 
+        p Веденный Вами адрес недоступен. Этому может быть несколько объяснений:
+        p Страница удалена или перенесена в другое место<br> Вы перешли по ссылке, в которой была допущена ошибка
+      .notfound__btns
+        a.notfound__btn.btn-primary(href="#") Перейти на главную
+        a.notfound__btn.btn-secondary(href="#") Смотреть портфолио

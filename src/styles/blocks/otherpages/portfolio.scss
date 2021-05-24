@@ -1,0 +1,173 @@
+.portfolio {
+  overflow: hidden;
+  &__filter {
+    margin-bottom: 60px;
+    background-color: var(--card-surface);
+    @include w1200 {
+      margin-bottom: 70px;
+    }
+    @include w1023 {
+      margin-bottom: 80px;
+    }
+  }
+  &-filter {
+    &__container {
+      position: relative;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 76px);
+      padding-left: 0;
+      list-style: none;
+      transform: translateX(-38px);
+      @include w1200 {
+        width: calc(100% + 54px);
+        transform: translateX(-27px);
+      }
+      @include w1023 {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+    }
+    &__item {
+      position: relative;
+      margin-bottom: 20px;
+      @include w1200 {
+        margin-bottom: 10px;
+      }
+      @include w1023 {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: -100vw;
+        width: 200vw;
+        height: 20px;
+        background-color: var(--surface);
+        @include w1200 {
+          height: 10px;
+        }
+        @include w1023 {
+          display: none;
+        }
+      }
+      &:last-child {
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 100%;
+          width: 100vw;
+          height: 100%;
+          background-color: var(--surface);
+          @include w1023 {
+            display: none;
+          }
+        }
+      }
+    }
+    &-item {
+      &__label {
+        input {
+          @include hover {
+            &:focus + span:after {
+              transform: scale(1);
+            }
+          }
+          &:checked + span {
+            color: var(--accent);
+          }
+        }
+        span {
+          position: relative;
+          display: block;
+          padding: 20px 38px;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 26px;
+          cursor: pointer;
+          transition: color 0.2s;
+          white-space: nowrap;
+          @include w1200 {
+            padding: 18px 27px;
+            font-size: 16px;
+            line-height: 23px;
+          }
+          @include hover {
+            &:hover:after,
+            &:focus:after {
+              transform: scale(1);
+            }
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            top: 18px;
+            right: 25px;
+            display: block;
+            width: 5px;
+            height: 5px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.15s ease;
+            @include w1200 {
+              top: 14px;
+              right: 19px;
+            }
+          }
+        }
+      }
+    }
+    &__reset {
+      position: absolute;
+      left: 16px;
+      bottom: -22px;
+      display: flex;
+      padding: 0;
+      align-items: center;
+      background: none;
+      border: none;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--main-on-surface);
+      cursor: pointer;
+      transition: color 0.2s;
+      @include w1200 {
+        bottom: -27px;
+      }
+      @include w1023 {
+        bottom: -45px;
+        left: 12px;
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: 0.01em;
+      }
+      @include hover {
+        &:hover,
+        &:focus {
+          color: var(--accent);
+          path {
+            stroke: var(--accent);
+          }
+        }
+      }
+      @include active {
+        &:active {
+          color: var(--accent);
+          path {
+            stroke: var(--accent);
+          }
+        }
+      }
+      path {
+        stroke: var(--main-on-surface);
+        transition: stroke 0.2s;
+      }
+    }
+  }
+}
